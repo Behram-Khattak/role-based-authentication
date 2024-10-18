@@ -3,10 +3,9 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <div class="w-full h-screen xl:grid-cols-2 xl:grid place-content-center">
-        <div id="default-carousel" class="relative hidden w-full h-screen p-4 xl:block" data-carousel="static">
+        <div id="default-carousel" class="relative hidden w-full h-screen p-4 xl:block" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative h-full overflow-hidden rounded-2xl">
-                {{-- <div class="absolute inset-0 z-10 bg-black opacity-50"></div> --}}
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="{{ asset('assets/images/student-img-1.avif') }}"
@@ -14,8 +13,8 @@
                         alt="...">
                     <div class="absolute inset-0 bg-black opacity-40"></div>
 
-                    <div class="absolute w-16 h-16 top-5 left-5 rounded-2xl quotes bg-secondary">
-                        <span class="absolute top-0 left-3 text-9xl text-yale">"</span>
+                    <div class="absolute w-16 h-16 top-5 left-5 rounded-2xl quotes bg-primary dark:bg-secondary">
+                        <span class="absolute top-0 left-3 text-9xl text-secondary dark:text-primary">"</span>
                     </div>
                     {{-- content --}}
                     <div
@@ -37,8 +36,8 @@
                         class="absolute block w-full h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="...">
                     <div class="absolute inset-0 bg-black opacity-40"></div>
-                    <div class="absolute w-16 h-16 top-5 left-5 rounded-2xl quotes bg-secondary">
-                        <span class="absolute top-0 left-3 text-9xl text-yale">"</span>
+                    <div class="absolute w-16 h-16 top-5 left-5 rounded-2xl quotes bg-primary dark:bg-secondary">
+                        <span class="absolute top-0 left-3 text-9xl text-secondary dark:text-primary">"</span>
                     </div>
                     {{-- content --}}
                     <div
@@ -60,8 +59,8 @@
                         class="absolute block w-full h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="...">
                     <div class="absolute inset-0 bg-black opacity-40"></div>
-                    <div class="absolute w-16 h-16 top-5 left-5 rounded-2xl quotes bg-secondary">
-                        <span class="absolute top-0 left-3 text-9xl text-yale">"</span>
+                    <div class="absolute w-16 h-16 top-5 left-5 rounded-2xl quotes bg-primary dark:bg-secondary">
+                        <span class="absolute top-0 left-3 text-9xl text-secondary dark:text-primary">"</span>
                     </div>
                     {{-- content --}}
                     <div
@@ -83,13 +82,13 @@
                         class="absolute block w-full h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="...">
                     <div class="absolute inset-0 bg-black opacity-40"></div>
-                    <div class="absolute w-16 h-16 top-5 left-5 rounded-2xl quotes bg-secondary">
-                        <span class="absolute top-0 left-3 text-9xl text-yale">"</span>
+                    <div class="absolute w-16 h-16 top-5 left-5 rounded-2xl quotes bg-primary dark:bg-secondary">
+                        <span class="absolute top-0 left-3 text-9xl text-secondary dark:text-primary">"</span>
                     </div>
                     {{-- content --}}
                     <div
                         class="absolute pb-4 pr-4 space-y-6 text-2xl text-justify content bottom-10 left-4 text-secondary">
-                        <h3 class="text-4xl font-bold">"Global Connections, Limitless Possibilities"</h3>
+                        <h3 class="text-4xl font-bold">"Global Connections"</h3>
                         <p class="">At Blackstone, our students are part of an international community.
                             We offer them opportunities to network with professionals, academics,
                             and peers from around the world, opening doors to unparalleled
@@ -111,33 +110,7 @@
                 <button type="button" class="w-20 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
                     data-carousel-slide-to="3"></button>
             </div>
-            <!-- Slider controls -->
-            {{-- <button type="button"
-                class="absolute top-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer start-0 group focus:outline-none"
-                data-carousel-prev>
-                <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 1 1 5l4 4" />
-                    </svg>
-                    <span class="sr-only">Previous</span>
-                </span>
-            </button>
-            <button type="button"
-                class="absolute top-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer end-0 group focus:outline-none"
-                data-carousel-next>
-                <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m1 9 4-4-4-4" />
-                    </svg>
-                    <span class="sr-only">Next</span>
-                </span>
-            </button> --}}
+
         </div>
 
         <div class="grid w-full h-screen px-24 py-2 overflow-scroll">
@@ -145,9 +118,9 @@
             <div class="logos">
                 <div class="flex items-center justify-between">
                     <img src="{{ asset('assets/images/blackstone.gif') }}" alt="Logo 1"
-                        class="w-32 h-auto sm:w-52 object-fit" />
+                        class="w-32 h-auto sm:w-48 object-fit" />
                     <img src="{{ asset('assets/images/london-uni.svg') }}" alt="Logo 2"
-                        class="w-32 h-auto p-2 rounded-lg object-fit sm:w-52 bg-yale" />
+                        class="w-32 h-auto p-2 rounded-lg object-fit sm:w-42 bg-primary dark:bg-transparent" />
                 </div>
             </div>
 
@@ -155,18 +128,18 @@
             <form method="POST" class="w-full" action="{{ route('login') }}" x-data="{ showPassword: false }">
                 @csrf
                 <div class="my-8 text-center title">
-                    <h2 class="text-3xl leading-loose capitalize sm:text-4xl text-yale">
+                    <h2 class="text-3xl leading-loose capitalize sm:text-4xl text-primary dark:text-secondary">
                         <span class="font-regular">sign in to</span> <strong
-                            class="px-2 font-extrabold rounded bg-yale text-secondary">{{ config('app.name') }}</strong>
+                            class="px-2 font-extrabold rounded bg-primary dark:bg-secondary text-secondary dark:text-primary">{{ config('app.name') }}</strong>
                     </h2>
-                    <p class="text-xl font-medium text-gray-500 capitalize">school of <span class="text-yale">law</span>
-                        & <span class="text-yale">business</span></p>
+                    <p class="pt-4 text-xl font-medium text-gray-500 capitalize dark:text-gray-400">school of <span class="text-primary dark:text-secondary">law</span>
+                        & <span class="text-primary dark:text-secondary">business</span></p>
                 </div>
 
                 <!-- Email Address -->
                 <div>
                     <x-input-label for="email" :value="__('Email')" />
-                    <x-text-input id="email" class="block w-full h-12 mt-1" type="email" name="email"
+                    <x-text-input id="email" class="block w-full h-12 mt-1 bg-white dark:bg-primary text-primary dark:text-secondary" type="email" name="email"
                         :value="old('email')" required autofocus autocomplete="username" placeholder="user@example.com" />
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
@@ -175,7 +148,7 @@
                 <div class="mt-4">
                     <x-input-label for="password" :value="__('Password')" />
 
-                    <x-text-input id="password" class="block w-full h-12 mt-1" name="password"
+                    <x-text-input id="password" class="block w-full h-12 mt-1 bg-white dark:bg-primary text-primary dark:text-secondary" name="password"
                         required autocomplete="current-password" placeholder="xxxxxxxx"
                         x-bind:type="showPassword ? 'text' : 'password'" />
 
@@ -185,44 +158,38 @@
                 <div class="block mt-4">
                     <label for="show_password" class="inline-flex items-center">
                         <input id="show_password" @click="showPassword = !showPassword" type="checkbox"
-                            class="border-gray-300 rounded shadow-sm text-yale dark:bg-gray-900 dark:border-gray-700 focus:ring-yale dark:focus:ring-yale dark:focus:ring-offset-gray-800"
+                            class="border-gray-300 rounded shadow-sm text-primary dark:bg-primary dark:border-secondary focus:ring-primary dark:focus:ring-secondary dark:focus:ring-offset-secondary"
                             name="remember">
-                        <span class="text-sm text-gray-600 ms-2 dark:text-gray-400">{{ __('Show Password') }}</span>
+                        <span class="text-sm text-primary ms-2 dark:text-secondary">{{ __('Show Password') }}</span>
                     </label>
                 </div>
 
                 <div class="mt-4">
-                    {{-- @if (Route::has('password.request'))
-                        <a class="text-sm text-gray-600 underline rounded-md dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
-                            href="{{ route('password.request') }}">
-                            {{ __('Forgot your password?') }}
-                        </a>
-                    @endif --}}
 
                     <x-primary-button
-                        class="w-full h-12 mt-6 text-center border-2 hover:bg-yale dark:hover:bg-white text-yale hover:text-secondary dark:text-yale border-yale dark:bg-secondary">
+                        class="w-full h-12 mt-6 text-center border-2 hover:bg-primary dark:hover:bg-secondary text-primary hover:text-secondary dark:text-secondary border-primary dark:border-secondary dark:hover:text-primary">
                         {{ __('Log in') }}
                     </x-primary-button>
                 </div>
 
                 {{-- add or in center and a line on sides and below that add social icons like goolge linkedin twitter --}}
-                <div class="flex items-center gap-3 mt-8 text-lg text-center text-yale dark:text-secondary">
-                    <div class="w-full h-[1px] bg-yale"></div>
+                <div class="flex items-center gap-3 mt-8 text-lg text-center text-primary dark:text-secondary">
+                    <div class="w-full h-[1px] bg-primary dark:bg-secondary"></div>
                     <span class="">or</span>
-                    <div class="w-full h-[1px] bg-yale"></div>
+                    <div class="w-full h-[1px] bg-primary dark:bg-secondary"></div>
                 </div>
 
                 <div class="mb-6 text-center continue-with">
-                    <span class="text-lg text-yale">continue with</span>
+                    <span class="text-lg text-primary dark:text-secondary">continue with</span>
                 </div>
 
                 <div class="flex flex-col items-center space-y-6 social-btns">
                     <x-primary-button
-                        class="flex items-center justify-center gap-2 text-sm text-center border border-yale/30 border-se text-yale hover:bg-yale dark:hover:bg-white hover:text-secondary w-80">
+                        class="flex items-center justify-center gap-2 text-sm text-center border border-primary/30 dark:border-secondary dark:text-secondary dark:hover:text-primary border-se text-primary hover:bg-primary dark:hover:bg-white hover:text-secondary w-80">
                         <i class="text-2xl text-red-500 fab fa-google"></i> {{ __('Google') }}
                     </x-primary-button>
                     <x-primary-button
-                        class="flex items-center justify-center gap-2 text-sm text-center border border-yale/30 text-yale hover:bg-yale hover:text-secondary w-80">
+                        class="flex items-center justify-center gap-2 text-sm text-center border border-primary/30 dark:border-secondary dark:text-secondary dark:hover:text-primary border-se text-primary hover:bg-primary dark:hover:bg-white hover:text-secondary w-80">
                         <i class="text-2xl fab fa-apple"></i> {{ __('Apple') }}
                     </x-primary-button>
                 </div>
@@ -232,12 +199,7 @@
 
     <x-slot:script>
         <script type="text/javascript">
-            document.addEventListener("alpine:init", function() {
-                function showPassword() {
-                    const passwordInput = document.getElementById('password');
-                    passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
-                }
-            });
+        //
         </script>
     </x-slot:script>
 </x-guest-layout>
